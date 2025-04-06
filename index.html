@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Instagram Photo Feed</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="p-4">
+  <nav class="navbar navbar-light bg-light">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <i class="fab fa-instagram fa-lg me-2"></i>
+        <span class="fw-bold">Instagram</span>
+      </a>
+      <div class="d-flex align-items-center">
+        <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#newPostModal">
+          Crear nuevo post
+        </button>
+        <div class="dropdown">
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="settingsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-gear"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingsDropdown">
+            <li><a class="dropdown-item" href="#">Perfil</a></li>
+            <li><a class="dropdown-item" href="#">Accesibilidad</a></li>
+            <li><a class="dropdown-item" href="#">Privacidad y datos</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="#">Cerrar sesión</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="d-flex justify-content-center mt-4">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid" type="button" role="tab">
+          <i class="fas fa-th-large" title="Galería"></i>
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="cards-tab" data-bs-toggle="tab" data-bs-target="#cards" type="button" role="tab">
+          <i class="fa-sharp fa-solid fa-square" style="color: #030303;"></i>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="tab-content mt-4">
+    <div class="tab-pane fade" id="cards" role="tabpanel">
+      <div class="container">
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-6">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body position-relative">
+                <h5 class="card-title position-absolute top-0 start-0 mt-2 ms-3">Guitarra Española</h5>
+                <span class="position-absolute top-0 end-0 mt-2 me-3">#1</span>
+                <img src="cuerda1.png" class="card-img-top mx-auto d-block my-3 fixed-img" alt="Guitarra Española">
+                <p class="card-text text-center">
+                  La guitarra española es un instrumento de cuerdas utilizado en la música clásica y flamenca. Su sonido cálido y resonante la hace ideal para acompañamientos y solos melódicos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-6">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body position-relative">
+                <h5 class="card-title position-absolute top-0 start-0 mt-2 ms-3">Guitarra Eléctrica</h5>
+                <span class="position-absolute top-0 end-0 mt-2 me-3">#2</span>
+                <img src="cuerda2.png" class="card-img-top mx-auto d-block my-3 fixed-img" alt="Guitarra Eléctrica">
+                <p class="card-text text-center">
+                  La guitarra eléctrica es esencial en el rock, blues y jazz modernos. Su versatilidad y capacidad para generar una amplia gama de tonos la hacen única.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-6">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body position-relative">
+                <h5 class="card-title position-absolute top-0 start-0 mt-2 ms-3">Bajo Eléctrico</h5>
+                <span class="position-absolute top-0 end-0 mt-2 me-3">#3</span>
+                <img src="cuerda3.png" class="card-img-top mx-auto d-block my-3 fixed-img" alt="Bajo Eléctrico">
+                <p class="card-text text-center">
+                  El bajo eléctrico es un instrumento fundamental en la música moderna, proporcionando una base rítmica y armónica en géneros como rock, jazz y música popular.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-6">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body position-relative">
+                <h5 class="card-title position-absolute top-0 start-0 mt-2 ms-3">Saxofón</h5>
+                <span class="position-absolute top-0 end-0 mt-2 me-3">#4</span>
+                <img src="viento1.png" class="card-img-top mx-auto d-block my-3 fixed-img" alt="Saxofón">
+                <p class="card-text text-center">
+                  El saxofón es un instrumento de viento de la familia de los metales, aunque se toca con una lengüeta. Es popular en géneros como jazz, música clásica y bandas de marcha, conocido por su sonido cálido y expresivo.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-6">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body position-relative">
+                <h5 class="card-title position-absolute top-0 start-0 mt-2 ms-3">Trombón</h5>
+                <span class="position-absolute top-0 end-0 mt-2 me-3">#5</span>
+                <img src="viento2.png" class="card-img-top mx-auto d-block my-3 fixed-img" alt="Trombón">
+                <p class="card-text text-center">
+                  El trombón es un instrumento de viento-metal que se distingue por su tubo largo y su deslizamiento. Utilizado en bandas de jazz, música clásica y orquestas, su sonido es muy característico y flexible.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-6">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body position-relative">
+                <h5 class="card-title position-absolute top-0 start-0 mt-2 ms-3">Trompeta</h5>
+                <span class="position-absolute top-0 end-0 mt-2 me-3">#6</span>
+                <img src="viento3.png" class="card-img-top mx-auto d-block my-3 fixed-img" alt="Trompeta">
+                <p class="card-text text-center">
+                  La trompeta es uno de los instrumentos más antiguos de la familia de los metales. Conocida por su brillo y proyección sonora, es un elemento fundamental en géneros como el jazz, la música clásica y las bandas de música.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-6">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body position-relative">
+                <h5 class="card-title position-absolute top-0 start-0 mt-2 ms-3">Batería</h5>
+                <span class="position-absolute top-0 end-0 mt-2 me-3">#7</span>
+                <img src="percusion1.png" class="card-img-top mx-auto d-block my-3 fixed-img" alt="Batería">
+                <p class="card-text text-center">
+                  La batería es el corazón del ritmo en una banda. Compuesta por tambores, platillos y otros elementos de percusión, su función principal es marcar el compás y proporcionar la base rítmica para otros instrumentos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-6">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body position-relative">
+                <h5 class="card-title position-absolute top-0 start-0 mt-2 ms-3">Congas</h5>
+                <span class="position-absolute top-0 end-0 mt-2 me-3">#8</span>
+                <img src="percusion2.png" class="card-img-top mx-auto d-block my-3 fixed-img" alt="Congas">
+                <p class="card-text text-center">
+                  Las congas son tambores de origen africano que se tocan con las manos. Son esenciales en la música latina, especialmente en géneros como la salsa y el jazz latino, y se caracterizan por su sonido profundo y resonante.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-6">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body position-relative">
+                <h5 class="card-title position-absolute top-0 start-0 mt-2 ms-3">Yembé</h5>
+                <span class="position-absolute top-0 end-0 mt-2 me-3">#9</span>
+                <img src="percusion3.png" class="card-img-top mx-auto d-block my-3 fixed-img" alt="Yembé">
+                <p class="card-text text-center">
+                  El yembé es un tambor de mano originario de África, utilizado en rituales y celebraciones. Su sonido vibrante y profundo se produce golpeando su membrana con las manos y es fundamental en la música tradicional africana y la música popular de América Latina.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="tab-pane fade show active" id="grid" role="tabpanel">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="d-flex justify-content-center">
+              <img src="cuerda1.png" class="img-fluid border rounded" alt="Guitarra Española">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex justify-content-center">
+              <img src="cuerda2.png" class="img-fluid border rounded" alt="Guitarra Eléctrica">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex justify-content-center">
+              <img src="cuerda3.png" class="img-fluid border rounded" alt="Bajo Eléctrico">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex justify-content-center">
+              <img src="viento1.png" class="img-fluid border rounded" alt="Saxofón">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex justify-content-center">
+              <img src="viento2.png" class="img-fluid border rounded" alt="Trombón">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex justify-content-center">
+              <img src="viento3.png" class="img-fluid border rounded" alt="Trompeta">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex justify-content-center">
+              <img src="percusion1.png" class="img-fluid border rounded" alt="Batería">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex justify-content-center">
+              <img src="percusion2.png" class="img-fluid border rounded" alt="Congas">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex justify-content-center">
+              <img src="percusion3.png" class="img-fluid border rounded" alt="Yembé">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+
+  <div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="newPostModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="newPostModalLabel">Crear nuevo post</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <label for="postTitle" class="form-label">Título:</label>
+          <textarea id="postTitle" class="form-control mb-3" rows="3" maxlength="200" placeholder="Agrega el título de tu publicación aquí"></textarea>
+          <div class="d-flex gap-2">
+            <button class="btn btn-outline-secondary"><i class="fas fa-image"></i> Foto</button>
+            <button class="btn btn-outline-secondary"><i class="fas fa-map-marker-alt"></i> Ubicación</button>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-success">Publicar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-light text-center text-dark py-3 mt-4">
+    <p>&copy; 2025 - Instagram Clone Erwin</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
